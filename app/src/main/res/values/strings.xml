@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SMSVerificationAPIExample</string>
+    <string name="sms_retriever_api">SMS Retriever API</string>
 </resources>
