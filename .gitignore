@@ -1,0 +1,52 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/tasks.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/dictionaries
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Log Files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# Version control
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+# lint/reports/
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
