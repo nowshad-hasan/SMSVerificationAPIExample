@@ -14,6 +14,8 @@ import com.google.android.gms.common.api.Status;
  * @created on 2/3/2020 3:11 PM
  */
 public class MySMSBroadcastReceiver extends BroadcastReceiver {
+    private static SMSListener smsListener;
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (SmsRetriever.SMS_RETRIEVED_ACTION.equals(intent.getAction())) {
@@ -30,14 +32,22 @@ public class MySMSBroadcastReceiver extends BroadcastReceiver {
                         String message = (String) extras.get(SmsRetriever.EXTRA_SMS_MESSAGE);
                         // Extract one-time code from the message and complete verification
                         // by sending the code back to your server.
+                        if (smsListener != null)
+                            smsListener.onSuccess(message);
                         break;
                     case CommonStatusCodes.TIMEOUT:
                         // Waiting for SMS timed out (5 minutes)
                         // Handle the error ...
+                        if (smsListener != null)
+                            smsListener.onError("Failed to extract from Broadcast Receiver");
                         break;
                 }
             }
         }
 
+    }
+
+    public static void initSMSListener(SMSListener listener) {
+        smsListener = listener;
     }
 }

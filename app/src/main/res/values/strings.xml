@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">SMSVerificationAPIExample</string>
     <string name="sms_retriever_api">SMS Retriever API</string>
+    <string name="sms_user_consent_api">SMS User Consent API</string>
+    <string name="otp_to_set">OTP to Set</string>
 </resources>
