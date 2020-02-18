@@ -69,12 +69,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onError(String message) {
                         if (message != null)
-                            etOTPSet.setText(parseOneTimeCode(message));
+                            Log.d(TAG,message);
                     }
                 });
             });
 
             task.addOnFailureListener(e -> {
+                e.printStackTrace();
             });
         });
 
